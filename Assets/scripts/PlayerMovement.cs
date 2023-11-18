@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
-    public Rigidbody rb;
+    public Rigidbody2D rb;
     void Start()
     {
         
@@ -17,19 +17,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            rb.AddForce(new Vector2(speed * Time.deltaTime, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector2(speed * Time.deltaTime, 0), ForceMode2D.Impulse);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            rb.AddForce(new Vector2(-speed * Time.deltaTime, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector2(-speed * Time.deltaTime, 0), ForceMode2D.Impulse);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            rb.AddForce(new Vector2(0, speed * Time.deltaTime), ForceMode.Impulse);
+            rb.AddForce(new Vector2(0, speed * Time.deltaTime), ForceMode2D.Impulse);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            rb.AddForce(new Vector2(0, -speed * Time.deltaTime), ForceMode.Impulse);
+            rb.AddForce(new Vector2(0, -speed * Time.deltaTime), ForceMode2D.Impulse);
         }
     }
 }
