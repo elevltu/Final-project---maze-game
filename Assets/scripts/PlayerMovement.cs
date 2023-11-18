@@ -50,11 +50,11 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
-            rb.velocity = new Vector2(rb.velocity.y, speed);
+            rb.velocity = new Vector2(rb.velocity.x, speed);
         }
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
-            rb.velocity = new Vector2(rb.velocity.y, -speed);
+            rb.velocity = new Vector2(rb.velocity.x, -speed);
         }
     }
 }
