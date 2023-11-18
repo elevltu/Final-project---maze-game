@@ -31,11 +31,20 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(0, -speed * Time.deltaTime), ForceMode2D.Impulse);
         }*/
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        if (!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.D))
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+        if (!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.S))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.A))
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
         }
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.D))
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
