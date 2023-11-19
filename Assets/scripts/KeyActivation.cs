@@ -25,4 +25,14 @@ public class KeyActivation : MonoBehaviour
             keyIsActive = true;
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Box"))
+        {
+            if (keyToBeActivated.activeInHierarchy) {
+                keyToBeActivated.SetActive(false);
+                keyIsActive = false;
+            }
+        }
+    }
 }
