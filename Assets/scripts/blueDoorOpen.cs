@@ -18,10 +18,11 @@ public class blueDoorOpen : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (PlayerKeys.blueKeys >= 1)
-        {
-            PlayerKeys.blueKeys--;
-            Destroy(rb);
+        if (PlayerKeys.blueKeys >= 1) {
+            if (tag == "Player") {
+                PlayerKeys.blueKeys--;
+                Destroy(rb);
+            }
         }
     }
 }
