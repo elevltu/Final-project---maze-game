@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class blueDoorOpen : MonoBehaviour
 {
-    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +15,12 @@ public class blueDoorOpen : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        if (PlayerKeys.blueKeys >= 1) {
-            if (tag == "Player") {
-                PlayerKeys.blueKeys--;
-                Destroy(rb);
-            }
+        if (collision.gameObject.CompareTag("Player") && PlayerKeys.blueKeys >= 1)
+        {
+            gameObject.SetActive(false);
+
         }
     }
 }
