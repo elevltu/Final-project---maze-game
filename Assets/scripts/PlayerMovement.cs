@@ -15,22 +15,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.W))
-        {
-            rb.AddForce(new Vector2(speed * Time.deltaTime, 0), ForceMode2D.Impulse);
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            rb.AddForce(new Vector2(-speed * Time.deltaTime, 0), ForceMode2D.Impulse);
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            rb.AddForce(new Vector2(0, speed * Time.deltaTime), ForceMode2D.Impulse);
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            rb.AddForce(new Vector2(0, -speed * Time.deltaTime), ForceMode2D.Impulse);
-        }*/
         if (!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.D))
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
