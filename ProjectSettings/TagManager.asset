@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Box
   - Wall
+  - WallLeft
+  - WallTop
+  - WallRight
+  - WallBottom
   layers:
   - Default
   - TransparentFX
