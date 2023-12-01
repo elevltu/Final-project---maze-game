@@ -423,8 +423,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294751799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -452.875, y: -223.49998, z: 2}
-  m_LocalScale: {x: 40, y: 40, z: 1}
+  m_LocalPosition: {x: -449.36, y: -220.27, z: 2}
+  m_LocalScale: {x: 20, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1549559732}
@@ -559,7 +559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310994475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.18842703, y: -0.69, z: -9.989831}
+  m_LocalPosition: {x: 0.18842703, y: -0.6216837, z: -9.989831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -663,6 +663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisRoomCamera: {fileID: 0}
   previousRoomCamera: {fileID: 310994476}
+  background: {fileID: 294751801}
+  direction: 1
 --- !u!61 &355681749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -778,6 +780,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisRoomCamera: {fileID: 310994476}
   previousRoomCamera: {fileID: 0}
+  background: {fileID: 294751801}
+  direction: 3
 --- !u!61 &446365675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -846,6 +850,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisRoomCamera: {fileID: 310994476}
   previousRoomCamera: {fileID: 1711501392}
+  background: {fileID: 294751801}
+  direction: 3
 --- !u!61 &478151514
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2036,6 +2042,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisRoomCamera: {fileID: 1711501392}
   previousRoomCamera: {fileID: 310994476}
+  background: {fileID: 294751801}
+  direction: 1
 --- !u!61 &1193642212
 BoxCollider2D:
   m_ObjectHideFlags: 0
