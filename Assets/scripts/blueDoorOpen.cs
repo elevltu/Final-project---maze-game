@@ -20,7 +20,7 @@ public class blueDoorOpen : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && PlayerKeys.blueKeys >= 1)
         {
             gameObject.SetActive(false);
-
+            PlayerKeys.blueKeys--;
         }
     }
 }
