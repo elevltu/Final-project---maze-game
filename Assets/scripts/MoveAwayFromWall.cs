@@ -37,4 +37,5 @@ public class MoveAwayFromWall : MonoBehaviour
             rb.position = new Vector2(rb.position.x, rb.position.y+(pushForce*2));
         }
     }
+    
 }

@@ -10,7 +10,9 @@ public class MoveToNextRoom : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !thisRoomCamera.enabled)
-        thisRoomCamera.enabled = true;
-        previousRoomCamera.enabled = false;
+        {
+            thisRoomCamera.enabled = true;
+            previousRoomCamera.enabled = false;
+        }
     }
 }
