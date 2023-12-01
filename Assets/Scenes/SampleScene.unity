@@ -1376,7 +1376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3683120788923697896, guid: 41b4d5a71c6c44e44ac0f0e9289ca58e, type: 3}
       propertyPath: m_TagString
-      value: WallTop
+      value: WallBottom
       objectReference: {fileID: 0}
     - target: {fileID: 5300332237834970053, guid: 41b4d5a71c6c44e44ac0f0e9289ca58e, type: 3}
       propertyPath: m_Color.b
@@ -1652,7 +1652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3683120788923697896, guid: 41b4d5a71c6c44e44ac0f0e9289ca58e, type: 3}
       propertyPath: m_TagString
-      value: WallTop
+      value: WallBottom
       objectReference: {fileID: 0}
     - target: {fileID: 5300332237834970053, guid: 41b4d5a71c6c44e44ac0f0e9289ca58e, type: 3}
       propertyPath: m_Color.b
