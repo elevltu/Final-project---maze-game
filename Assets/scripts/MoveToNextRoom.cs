@@ -31,17 +31,11 @@ public class MoveToNextRoom : MonoBehaviour
             previousRoomCamera.enabled = false;
             thisRoomAudioListener.enabled = true;
             previousRoomAudioListener.enabled = false;
-            if (direction == Direction.up) {
-                background.transform.position = new Vector3(background.transform.position.x, background.transform.position.y + (float)(8.9783163 / 3), 2);
+            if (direction == Direction.up || direction == Direction.down) {
+                background.transform.position = new Vector3(background.transform.position.x, background.transform.position.y + (float)((thisRoomCamera.transform.position.y-previousRoomCamera.transform.position.y) / 3), 2);
             }
-            if (direction == Direction.down) {
-                background.transform.position = new Vector3(background.transform.position.x, background.transform.position.y - (float)(8.9783163 / 3), 2);
-            }
-            if (direction == Direction.left) {
-                background.transform.position = new Vector3(background.transform.position.x - (float)(8.9783163 / 3), background.transform.position.y, 2);
-            }
-            if (direction == Direction.right){
-                background.transform.position = new Vector3(background.transform.position.x + (float)(8.9783163 / 3), background.transform.position.y, 2);
+            if (direction == Direction.left || direction == Direction.right) {
+                background.transform.position = new Vector3(background.transform.position.x - (float)((thisRoomCamera.transform.position.x - previousRoomCamera.transform.position.x) / 3), background.transform.position.y, 2);
             }
         }
     }
