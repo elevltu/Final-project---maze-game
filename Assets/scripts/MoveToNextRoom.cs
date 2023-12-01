@@ -17,6 +17,7 @@ public class MoveToNextRoom : MonoBehaviour
     private AudioListener previousRoomAudioListener;
     public SpriteRenderer background;
     public Direction direction;
+    private int pushForce = 1;
     // Start is called before the first frame update
     private void Start()
     {
@@ -36,6 +37,19 @@ public class MoveToNextRoom : MonoBehaviour
             }
             if (direction == Direction.left || direction == Direction.right) {
                 background.transform.position = new Vector3(background.transform.position.x - (float)((thisRoomCamera.transform.position.x - previousRoomCamera.transform.position.x) / 3), background.transform.position.y, 2);
+            }
+        } else if (collision.gameObject.CompareTag("Box")) {
+            if (direction == Direction.left) {
+                collision.gameObject.transform.position = new Vector2(collision.gameObject.transform.position.x + pushForce, collision.gameObject.transform.position.y);
+            }
+            if (direction == Direction.right) {
+                collision.gameObject.transform.position = new Vector2(collision.gameObject.transform.position.x - pushForce, collision.gameObject.transform.position.y);
+            }
+            if (direction == Direction.down) {
+                collision.gameObject.transform.position = new Vector2(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y - (pushForce * 2));
+            }
+            if (direction == Direction.up) {
+                collision.gameObject.transform.position = new Vector2(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y + (pushForce * 2));
             }
         }
     }
