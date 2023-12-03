@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     public float speed;
     public Rigidbody2D rb;
+    private Vector2 playerPreviousLocation;
+    private bool shouldMoveBack;
     void Start()
     {
         
@@ -39,6 +41,25 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             rb.velocity = new Vector2(rb.velocity.x, -speed);
+        }
+        
+        if (shouldMoveBack) {
+            rb.position = playerPreviousLocation;
+            rb.velocity = Vector2.zero;
+            
+        }
+        playerPreviousLocation = rb.position;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PlayerBorder")) {
+            shouldMoveBack = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PlayerBorder")) {
+            shouldMoveBack = false;
         }
     }
 }
