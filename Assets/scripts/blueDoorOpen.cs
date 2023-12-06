@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class blueDoorOpen : MonoBehaviour
 {
+    private AudioSource audioSource;
+    public AudioClip openClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class blueDoorOpen : MonoBehaviour
         {
             gameObject.SetActive(false);
             PlayerKeys.blueKeys--;
+            AudioSource.PlayClipAtPoint(openClip, transform.position);
         }
     }
 }

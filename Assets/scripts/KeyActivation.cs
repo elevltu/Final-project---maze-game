@@ -6,6 +6,9 @@ public class KeyActivation : MonoBehaviour
 {
     public GameObject keyToBeActivated;
     private bool keyIsActive;
+    public AudioClip boxEnterClip;
+    public AudioClip boxExitClip;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,7 @@ public class KeyActivation : MonoBehaviour
         if (collision.gameObject.CompareTag("Box") && !keyIsActive)
         {
             keyToBeActivated.SetActive(true);
+            AudioSource.PlayClipAtPoint(boxEnterClip, transform.position);
             keyIsActive = true;
         }
     }
@@ -31,6 +35,7 @@ public class KeyActivation : MonoBehaviour
         {
             if (keyToBeActivated.activeInHierarchy) {
                 keyToBeActivated.SetActive(false);
+                AudioSource.PlayClipAtPoint(boxExitClip, transform.position);
                 keyIsActive = false;
             }
         }

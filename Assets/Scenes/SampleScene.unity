@@ -520,6 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyColor: blue
+  keyClip: {fileID: 8300000, guid: d69bbd232e96abe49a69540c0ada77a8, type: 3}
 --- !u!58 &175824523
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1973,6 +1974,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyToBeActivated: {fileID: 495519084}
+  boxEnterClip: {fileID: 8300000, guid: 93e808610112b7a44952c040661ac3f5, type: 3}
+  boxExitClip: {fileID: 8300000, guid: 09d30d4a4ee23ca4c8cdc02f41ce060a, type: 3}
 --- !u!1 &478151512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4327395782523337245, guid: 430e527dd04204f4bb5d152074969a00, type: 3}
@@ -2133,6 +2136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyColor: blue
+  keyClip: {fileID: 8300000, guid: cd68799d717a3ee4fb0a9c4ea65b943d, type: 3}
 --- !u!58 &495519087
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2361,6 +2365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyColor: blue
+  keyClip: {fileID: 8300000, guid: 24329f9424654ac4e9d870e3645b3be7, type: 3}
 --- !u!58 &589747470
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4205,6 +4210,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyToBeActivated: {fileID: 175824520}
+  boxEnterClip: {fileID: 8300000, guid: 93e808610112b7a44952c040661ac3f5, type: 3}
+  boxExitClip: {fileID: 8300000, guid: 09d30d4a4ee23ca4c8cdc02f41ce060a, type: 3}
 --- !u!4 &1031532791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6948110767054828320, guid: 41b4d5a71c6c44e44ac0f0e9289ca58e, type: 3}
@@ -6400,6 +6407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af24ce23a087c458e9feeb9ec1cdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openClip: {fileID: 8300000, guid: 478104231316e3a46975adc0e7341e11, type: 3}
 --- !u!61 &1564994448
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7811,6 +7819,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyToBeActivated: {fileID: 589747466}
+  boxEnterClip: {fileID: 8300000, guid: 93e808610112b7a44952c040661ac3f5, type: 3}
+  boxExitClip: {fileID: 8300000, guid: 09d30d4a4ee23ca4c8cdc02f41ce060a, type: 3}
 --- !u!4 &1842687860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5320771093247296196, guid: 6ff638ce1f399af4e8920aaca490022c, type: 3}
@@ -7921,6 +7931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af24ce23a087c458e9feeb9ec1cdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openClip: {fileID: 8300000, guid: 478104231316e3a46975adc0e7341e11, type: 3}
 --- !u!61 &2098468459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8097,6 +8108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af24ce23a087c458e9feeb9ec1cdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openClip: {fileID: 8300000, guid: 478104231316e3a46975adc0e7341e11, type: 3}
 --- !u!4 &2021264315553871347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2544307978274130912, guid: 430e527dd04204f4bb5d152074969a00, type: 3}
