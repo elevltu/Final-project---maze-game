@@ -6,6 +6,8 @@ public class KeyCollection : MonoBehaviour
 {
     public string keyColor;
     private bool isActive = true;
+    public AudioClip keyClip;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class KeyCollection : MonoBehaviour
         if (isActive == true && keyColor == "blue")
         {
             PlayerKeys.blueKeys++;
+            AudioSource.PlayClipAtPoint(keyClip, transform.position);
             gameObject.SetActive(false);
             isActive = false;
         }
